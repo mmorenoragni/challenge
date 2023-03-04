@@ -1,0 +1,57 @@
+version: '2'
+
+services:
+  #redis1:
+  #image: redis:6.2-alpine
+  #container_name: myRedis
+  #restart: always
+  #ports:
+  #- '6379:6379'
+  #networks:
+  #- spring-cloud-network
+  #command: redis-server
+  rabbitmq3:
+    container_name: rabbitmq
+    image: rabbitmq:3.8-management-alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      # AMQP protocol port
+      - '5672:5672'
+      # HTTP management UI
+      - '15672:15672'
+    networks:
+      - spring-cloud-network
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres1
+      - POSTGRES_PASSWORD=root1
+    ports:
+      - '5431:5431'
+    networks:
+      - spring-cloud-network
+      #message-server:
+      #container_name: message-server
+      #depends_on:
+      #- redis1
+      #- rabbitmq3
+      #- db
+      #build:
+      #context: image
+      #dockerfile: Dockerfile
+      #image: prueba-compose:vmock-11
+      #ports:
+      #- '8080:8080'
+      #environment:
+      #- SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/compose-postgres
+      #- SPRING_DATASOURCE_USERNAME=compose-postgres
+      #- SPRING_DATASOURCE_PASSWORD=compose-postgres
+      #- SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      #networks:
+      #- spring-cloud-network
+networks:
+  spring-cloud-network:
+    driver: bridge

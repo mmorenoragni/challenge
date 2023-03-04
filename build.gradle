@@ -1,0 +1,47 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.0-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-amqp'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	//implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	implementation 'com.giffing.bucket4j.spring.boot.starter:bucket4j-spring-boot-starter:0.5.2'
+	implementation 'org.redisson:redisson-spring-boot-starter:3.17.0'
+	implementation 'org.postgresql:postgresql:42.5.4'
+	//implementation 'org.springframework.retry:spring-retry:2.0.0'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.14'
+	// https://mvnrepository.com/artifact/com.squareup.okhttp/mockwebserver
+	implementation 'com.squareup.okhttp:mockwebserver:2.7.5'
+	// https://mvnrepository.com/artifact/org.json/json
+	implementation 'org.json:json:20220924'
+	implementation 'org.springframework.retry:spring-retry:1.2.5.RELEASE'
+
+	//implementation 'com.google.code.gson:gson:2.8.5'
+	//implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+	// https://mvnrepository.com/artifact/it.agilelab/darwin-postgres-connector
+	implementation 'it.agilelab:darwin-postgres-connector_2.13:1.2.1'
+
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
