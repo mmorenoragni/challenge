@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.challenge.services.OperationsServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-03-04T19:15:08" hostname="AR0C02GF1F8Q05N" time="0.119">
+  <properties/>
+  <testcase name="testFindAllOperationsWithPaggination()" classname="com.example.challenge.services.OperationsServiceTest" time="0.115"/>
+  <testcase name="calculatePercentageWhenFirstNumbersIs5AndSecondNumberIs10AndValueIsPresentInCache()" classname="com.example.challenge.services.OperationsServiceTest" time="0.001"/>
+  <testcase name="calculatePercentageWhenFirstNumbersIs5AndSecondNumberIs10AndValueIsNotInCache()" classname="com.example.challenge.services.OperationsServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -41,12 +41,12 @@ public class ChallengeController {
     }
 
     @GetMapping(value = "/challenge/find_operations")
-    public SearchResponseWrapper<Operation> findAllOperations(@RequestParam(required = false, defaultValue = "0") int pageNumer) {
+    public SearchResponseWrapper<Operation> findAllOperations(@RequestParam(required = false, defaultValue = "0") int pageNumber) {
 
         if (!rateLimiterService.resolveBucket("challengeBucket").tryConsume(1)) {
             throw new RateLimitException("Api Rate Limit has been exceeded");
         }
 
-        return operationsService.findAllOperationsWithPaggination(pageNumer);
+        return operationsService.findAllOperationsWithPaggination(pageNumber);
     }
 }

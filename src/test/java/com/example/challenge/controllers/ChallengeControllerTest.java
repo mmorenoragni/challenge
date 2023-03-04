@@ -75,7 +75,7 @@ class ChallengeControllerTest {
                 .queryParam("secondNum", "1"));
 
         response.andExpect(status().is(429))
-                .andExpect(jsonPath("$.error").value("bad_request"))
+                .andExpect(jsonPath("$.error").value("rate_limit"))
                 .andExpect(jsonPath("$.message").value("Api Rate Limit has been exceeded"))
                 .andExpect(jsonPath("$.status").value(429));
 
@@ -88,10 +88,10 @@ class ChallengeControllerTest {
         when(mockBucket.tryConsume(1)).thenReturn(false);
 
         ResultActions response = mockMvc.perform(get("/challenge/find_operations")
-                .queryParam("pageNumer", "5"));
+                .queryParam("pageNumber", "5"));
 
         response.andExpect(status().is(429))
-                .andExpect(jsonPath("$.error").value("bad_request"))
+                .andExpect(jsonPath("$.error").value("rate_limit"))
                 .andExpect(jsonPath("$.message").value("Api Rate Limit has been exceeded"))
                 .andExpect(jsonPath("$.status").value(429));
 
@@ -110,7 +110,7 @@ class ChallengeControllerTest {
         when(operationsService.findAllOperationsWithPaggination(5)).thenReturn(searchResult);
 
         ResultActions response = mockMvc.perform(get("/challenge/find_operations")
-                .queryParam("pageNumer", "5"));
+                .queryParam("pageNumber", "5"));
 
         response.andExpect(status().isOk())
                 .andExpect(jsonPath("$.totalSize").value(10))
