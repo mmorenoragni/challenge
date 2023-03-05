@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PingController {
 
-    @Operation(summary = "Este controller devuelve la resputa PONG para indicar que el servicio esta levantado")
-    @GetMapping(value = "ping")
+    @Operation(summary = "Este controller devuelve la resputa PONG " +
+            "para indicar que el servicio esta levantado, su uso es interno, " +
+            "no debe publicarse para ser consumido desde afuera")
+    @GetMapping(value = "/ping")
     public String ping() {
 
         return "pong";

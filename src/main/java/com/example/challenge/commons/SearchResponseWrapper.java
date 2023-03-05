@@ -31,4 +31,12 @@ public class SearchResponseWrapper<T> {
     public List<T> getContent() {
         return content;
     }
+
+    public String toJson() {
+        return String.format("{\"totalSize\" : %s, \"currentPage\" : %s, \"totalPages\" : %s, \"content\" : %s}",
+                totalSize,
+                currentPage,
+                totalPages,
+                content.toString());
+    }
 }

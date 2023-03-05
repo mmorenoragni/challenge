@@ -1,7 +1,8 @@
 package com.example.challenge.services;
 
 import com.example.challenge.entities.Operation;
-import com.example.challenge.repositories.OperationRepository;
+import com.example.challenge.entities.RequestInformation;
+import com.example.challenge.repositories.RequestInformationRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -17,12 +18,12 @@ class ConsumerServiceTest {
     private ConsumerService consumerService;
 
     @Mock
-    private OperationRepository operationRepository;
+    private RequestInformationRepository operationRepository;
 
     @Test
     public void testCallToSaveMethod() {
-        Operation operation = new Operation(1d, 1d);
-        consumerService.handleMyQueue(operation);
-        verify(operationRepository).save(operation);
+        RequestInformation requestInformation = new RequestInformation("/mock_url", "\"mock\" : 123");
+        consumerService.handleMyQueue(requestInformation);
+        verify(operationRepository).save(requestInformation);
     }
 }

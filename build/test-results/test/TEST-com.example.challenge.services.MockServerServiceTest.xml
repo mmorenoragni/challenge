@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.challenge.services.MockServerServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-03-04T19:15:08" hostname="AR0C02GF1F8Q05N" time="0.052">
+<testsuite name="com.example.challenge.services.MockServerServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-03-05T15:12:36" hostname="AR0C02GF1F8Q05N" time="0.063">
   <properties/>
-  <testcase name="testShouldReturnExceptionWhenApiCallFailsAndNotFallbackValueWasSets()" classname="com.example.challenge.services.MockServerServiceTest" time="0.037"/>
-  <testcase name="testReturnExpectedJsonObjectWithValueWhenCallToExternalServiceWasSuccess()" classname="com.example.challenge.services.MockServerServiceTest" time="0.009"/>
+  <testcase name="testShouldReturnExceptionWhenApiCallFailsAndNotFallbackValueWasSets()" classname="com.example.challenge.services.MockServerServiceTest" time="0.045"/>
+  <testcase name="testReturnExpectedJsonObjectWithValueWhenCallToExternalServiceWasSuccess()" classname="com.example.challenge.services.MockServerServiceTest" time="0.011"/>
   <testcase name="testReturnContingencyValueWhenApiCallFails()" classname="com.example.challenge.services.MockServerServiceTest" time="0.005"/>
-  <system-out><![CDATA[2023-03-04 16:15:04.812  INFO 73422 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.challenge.services.MockServerServiceTest], using SpringBootContextLoader
-2023-03-04 16:15:04.812  INFO 73422 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.challenge.services.MockServerServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-03-04 16:15:04.812  INFO 73422 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.challenge.services.MockServerServiceTest]: MockServerServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-03-04 16:15:04.818  INFO 73422 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.challenge.ChallengeApplication for test class com.example.challenge.services.MockServerServiceTest
-2023-03-04 16:15:04.822  INFO 73422 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-03-04 16:15:04.822  INFO 73422 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2d705998, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28a3fc34, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7582a16b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4dd752e8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@62c46e53, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55317c63, org.springframework.test.context.transaction.TransactionalTestExecutionListener@35d81657, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@42ef5216, org.springframework.test.context.event.EventPublishingTestExecutionListener@3180aee, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5d94ac8a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@288b73c1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@104cfb24, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5340ccb9, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2bc8caa7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@582ea164]
+  <system-out><![CDATA[2023-03-05 12:12:32.515  INFO 87950 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.challenge.services.MockServerServiceTest], using SpringBootContextLoader
+2023-03-05 12:12:32.516  INFO 87950 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.challenge.services.MockServerServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-03-05 12:12:32.516  INFO 87950 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.challenge.services.MockServerServiceTest]: MockServerServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-03-05 12:12:32.519  INFO 87950 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.challenge.ChallengeApplication for test class com.example.challenge.services.MockServerServiceTest
+2023-03-05 12:12:32.522  INFO 87950 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-03-05 12:12:32.522  INFO 87950 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@72646d16, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6ec2d990, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1cfa7ee0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@612290d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@57cff804, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f39b534, org.springframework.test.context.transaction.TransactionalTestExecutionListener@60fbc34d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7736c41e, org.springframework.test.context.event.EventPublishingTestExecutionListener@5f911d24, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3de383f7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@33ccead, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@42ebece0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@15c4b1a4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@341964d0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@51b59d58]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,7 +19,7 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::       (v2.7.0-SNAPSHOT)
 
-2023-03-04 16:15:04.833  WARN 73422 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2023-03-05 12:12:32.531  WARN 87950 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -28,85 +28,51 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-03-04 16:15:04.834  INFO 73422 --- [    Test worker] c.e.c.services.MockServerServiceTest     : Starting MockServerServiceTest using Java 11.0.17 on AR0C02GF1F8Q05N with PID 73422 (started by mamoreno in /Users/mamoreno/challenge)
-2023-03-04 16:15:04.835  INFO 73422 --- [    Test worker] c.e.c.services.MockServerServiceTest     : No active profile set, falling back to 1 default profile: "default"
-2023-03-04 16:15:05.210  INFO 73422 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-03-04 16:15:05.212  INFO 73422 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-04 16:15:05.241  INFO 73422 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
-2023-03-04 16:15:05.250  INFO 73422 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-03-04 16:15:05.251  INFO 73422 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-03-04 16:15:05.259  INFO 73422 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.challenge.repositories.OperationRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
-2023-03-04 16:15:05.260  INFO 73422 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
-2023-03-04 16:15:05.653  INFO 73422 --- [    Test worker] org.redisson.Version                     : Redisson 3.17.0
-2023-03-04 16:15:05.666  WARN 73422 --- [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
-2023-03-04 16:15:05.817  INFO 73422 --- [sson-netty-2-24] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for localhost/127.0.0.1:6379
-2023-03-04 16:15:05.830  INFO 73422 --- [sson-netty-2-14] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for localhost/127.0.0.1:6379
-2023-03-04 16:15:05.954  INFO 73422 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-04 16:15:06.069  INFO 73422 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-04 16:15:06.114  INFO 73422 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-04 16:15:06.151  INFO 73422 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
-2023-03-04 16:15:06.190  INFO 73422 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-03-04 16:15:06.276  INFO 73422 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-03-04 16:15:06.520  INFO 73422 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-04 16:15:06.526  INFO 73422 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-04 16:15:07.076  INFO 73422 --- [    Test worker] org.redisson.Version                     : Redisson 3.17.0
-2023-03-04 16:15:07.088  INFO 73422 --- [sson-netty-5-27] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for localhost/127.0.0.1:6379
-2023-03-04 16:15:07.094  INFO 73422 --- [sson-netty-5-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for localhost/127.0.0.1:6379
-2023-03-04 16:15:07.234  WARN 73422 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-04 16:15:08.152  INFO 73422 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2023-03-04 16:15:08.201  INFO 73422 --- [    Test worker] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2023-03-04 16:15:08.206  INFO 73422 --- [    Test worker] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused (Connection refused)
-2023-03-04 16:15:08.211  INFO 73422 --- [ntContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2023-03-04 16:15:08.216 ERROR 73422 --- [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
-
-org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
-	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2173) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2146) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2126) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:463) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:447) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1917) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1898) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1374) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1220) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255) ~[na:na]
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237) ~[na:na]
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:na]
-	at java.base/java.net.Socket.connect(Socket.java:615) ~[na:na]
-	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.14.2.jar:5.14.2]
-	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223) ~[amqp-client-5.14.2.jar:5.14.2]
-	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173) ~[amqp-client-5.14.2.jar:5.14.2]
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565) ~[spring-rabbit-2.4.5.jar:2.4.5]
-	... 12 common frames omitted
-
-2023-03-04 16:15:08.217  INFO 73422 --- [ntContainer#0-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
-2023-03-04 16:15:08.224  INFO 73422 --- [    Test worker] c.e.c.services.MockServerServiceTest     : Started MockServerServiceTest in 3.401 seconds (JVM running for 6.826)
-2023-03-04 16:15:08.242  INFO 73422 --- [WebServer 51288] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51288] starting to accept connections
-2023-03-04 16:15:08.260  INFO 73422 --- [127.0.0.1:51289] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51288] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
-2023-03-04 16:15:08.263  INFO 73422 --- [127.0.0.1:51289] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51288] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 502 OK
-2023-03-04 16:15:08.264  INFO 73422 --- [127.0.0.1:51289] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51288] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
-2023-03-04 16:15:08.264  INFO 73422 --- [127.0.0.1:51289] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51288] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 500 OK
-2023-03-04 16:15:08.269  INFO 73422 --- [WebServer 51290] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51290] starting to accept connections
-2023-03-04 16:15:08.270  INFO 73422 --- [127.0.0.1:51291] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51290] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
-2023-03-04 16:15:08.270  INFO 73422 --- [127.0.0.1:51291] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51290] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 502 OK
-2023-03-04 16:15:08.271  INFO 73422 --- [127.0.0.1:51291] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51290] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
-2023-03-04 16:15:08.271  INFO 73422 --- [127.0.0.1:51291] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51290] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 200 OK
-2023-03-04 16:15:08.275  INFO 73422 --- [WebServer 51290] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51290] done accepting connections: Socket closed
-2023-03-04 16:15:08.279  INFO 73422 --- [WebServer 51292] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51292] starting to accept connections
-2023-03-04 16:15:08.280  INFO 73422 --- [127.0.0.1:51293] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51292] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
-2023-03-04 16:15:08.280  INFO 73422 --- [127.0.0.1:51293] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51292] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 502 OK
-2023-03-04 16:15:08.281  INFO 73422 --- [127.0.0.1:51293] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51292] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
-2023-03-04 16:15:08.281  INFO 73422 --- [127.0.0.1:51293] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[51292] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 500 OK
+2023-03-05 12:12:32.532  INFO 87950 --- [    Test worker] c.e.c.services.MockServerServiceTest     : Starting MockServerServiceTest using Java 11.0.17 on AR0C02GF1F8Q05N with PID 87950 (started by mamoreno in /Users/mamoreno/challenge)
+2023-03-05 12:12:32.532  INFO 87950 --- [    Test worker] c.e.c.services.MockServerServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2023-03-05 12:12:32.915  INFO 87950 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-05 12:12:32.917  INFO 87950 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-05 12:12:32.944  INFO 87950 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2023-03-05 12:12:32.952  INFO 87950 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-05 12:12:32.953  INFO 87950 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-05 12:12:32.961  INFO 87950 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.challenge.repositories.RequestInformationRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2023-03-05 12:12:32.961  INFO 87950 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-03-05 12:12:33.353  INFO 87950 --- [    Test worker] org.redisson.Version                     : Redisson 3.17.0
+2023-03-05 12:12:33.367  WARN 87950 --- [    Test worker] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS.
+2023-03-05 12:12:33.507  INFO 87950 --- [sson-netty-2-21] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for localhost/127.0.0.1:6379
+2023-03-05 12:12:33.529  INFO 87950 --- [sson-netty-2-20] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for localhost/127.0.0.1:6379
+2023-03-05 12:12:33.658  INFO 87950 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-05 12:12:33.786  INFO 87950 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-05 12:12:33.835  INFO 87950 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-05 12:12:33.870  INFO 87950 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2023-03-05 12:12:33.911  INFO 87950 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-05 12:12:33.992  INFO 87950 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-03-05 12:12:34.251  INFO 87950 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-05 12:12:34.257  INFO 87950 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-05 12:12:34.811  INFO 87950 --- [    Test worker] org.redisson.Version                     : Redisson 3.17.0
+2023-03-05 12:12:34.824  INFO 87950 --- [isson-netty-5-1] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for localhost/127.0.0.1:6379
+2023-03-05 12:12:34.831  INFO 87950 --- [sson-netty-5-20] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for localhost/127.0.0.1:6379
+2023-03-05 12:12:34.960  WARN 87950 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-05 12:12:35.892  INFO 87950 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-05 12:12:35.939  INFO 87950 --- [    Test worker] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2023-03-05 12:12:35.998  INFO 87950 --- [    Test worker] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#238fcafa:0/SimpleConnection@2165828d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 55239]
+2023-03-05 12:12:36.047  INFO 87950 --- [    Test worker] c.e.c.services.MockServerServiceTest     : Started MockServerServiceTest in 3.524 seconds (JVM running for 6.918)
+2023-03-05 12:12:36.068  INFO 87950 --- [WebServer 55240] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55240] starting to accept connections
+2023-03-05 12:12:36.093  INFO 87950 --- [127.0.0.1:55241] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55240] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
+2023-03-05 12:12:36.096  INFO 87950 --- [127.0.0.1:55241] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55240] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 502 OK
+2023-03-05 12:12:36.098  INFO 87950 --- [127.0.0.1:55241] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55240] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
+2023-03-05 12:12:36.098  INFO 87950 --- [127.0.0.1:55241] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55240] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 500 OK
+2023-03-05 12:12:36.103  INFO 87950 --- [WebServer 55242] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55242] starting to accept connections
+2023-03-05 12:12:36.104  INFO 87950 --- [127.0.0.1:55243] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55242] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
+2023-03-05 12:12:36.105  INFO 87950 --- [127.0.0.1:55243] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55242] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 502 OK
+2023-03-05 12:12:36.105  INFO 87950 --- [127.0.0.1:55243] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55242] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
+2023-03-05 12:12:36.106  INFO 87950 --- [127.0.0.1:55243] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55242] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 200 OK
+2023-03-05 12:12:36.111  INFO 87950 --- [WebServer 55242] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55242] done accepting connections: Socket closed
+2023-03-05 12:12:36.115  INFO 87950 --- [WebServer 55244] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55244] starting to accept connections
+2023-03-05 12:12:36.117  INFO 87950 --- [127.0.0.1:55245] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55244] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
+2023-03-05 12:12:36.117  INFO 87950 --- [127.0.0.1:55245] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55244] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 502 OK
+2023-03-05 12:12:36.117  INFO 87950 --- [127.0.0.1:55245] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55244] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 429 OK
+2023-03-05 12:12:36.117  INFO 87950 --- [127.0.0.1:55245] c.s.okhttp.mockwebserver.MockWebServer   : MockWebServer[55244] received request: GET /mockserver HTTP/1.1 and responded: HTTP/1.1 500 OK
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

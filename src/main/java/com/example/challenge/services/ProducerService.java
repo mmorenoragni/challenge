@@ -1,6 +1,6 @@
 package com.example.challenge.services;
 
-import com.example.challenge.entities.Operation;
+import com.example.challenge.entities.RequestInformation;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class ProducerService {
     }
 
 
-    public void sendMessage(Operation operation) {
-        rabbitTemplate.convertAndSend("my-queue", operation);
+    public void sendMessage(RequestInformation requestInformation) {
+        rabbitTemplate.convertAndSend("my-queue", requestInformation);
     }
 }

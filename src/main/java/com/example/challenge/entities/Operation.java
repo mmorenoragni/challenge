@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 import java.io.Serializable;
 
-@Entity(name = "operation")
+@Entity(name = "messages")
 public class Operation implements Serializable {
 
     @Id
@@ -36,5 +36,13 @@ public class Operation implements Serializable {
 
     public double getSecondNum() {
         return secondNum;
+    }
+
+    public String toString() {
+        return toJson();
+    }
+
+    public String toJson() {
+        return String.format("{\"id\" : %s, \"firstNum\" : %s, \"secondNum\" : %s}", id, firstNum, secondNum);
     }
 }

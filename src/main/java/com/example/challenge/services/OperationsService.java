@@ -3,7 +3,8 @@ package com.example.challenge.services;
 import com.example.challenge.commons.SearchResponseWrapper;
 import com.example.challenge.entities.Operation;
 import com.example.challenge.entities.OperationResult;
-import com.example.challenge.repositories.OperationRepository;
+import com.example.challenge.entities.RequestInformation;
+import com.example.challenge.repositories.RequestInformationRepository;
 import com.squareup.okhttp.mockwebserver.MockResponse;
 import org.json.JSONObject;
 import org.redisson.api.RAtomicDouble;
@@ -21,16 +22,16 @@ import java.util.stream.Collectors;
 public class OperationsService {
 
     private final MockServerService mockServerService;
-    private final OperationRepository operationRepository;
+    private final RequestInformationRepository requestInformationRepository;
     private final RedissonClient redissonClient;
     private final static String RESULT_KEY = "{\"result\": %s}";
     private final static int PAGE_SIZE = 5;
 
     public OperationsService(MockServerService mockServerService,
-                             OperationRepository operationRepository,
+                             RequestInformationRepository requestInformationRepository,
                              RedissonClient redissonClient) {
         this.mockServerService = mockServerService;
-        this.operationRepository = operationRepository;
+        this.requestInformationRepository = requestInformationRepository;
         this.redissonClient = redissonClient;
     }
 
@@ -57,10 +58,10 @@ public class OperationsService {
         return new OperationResult(result);
     }
 
-    public SearchResponseWrapper<Operation> findAllOperationsWithPaggination(int pageNumer) {
+    public SearchResponseWrapper<RequestInformation> findAllOperationsWithPaggination(int pageNumer) {
         Pageable pageable = PageRequest.of(pageNumer, PAGE_SIZE);
-        Page<Operation> result =  operationRepository.findAllWithPaggination(pageable);
-        List<Operation> content = result.get().collect(Collectors.toList());
+        Page<RequestInformation> result =  requestInformationRepository.findAllWithPaggination(pageable);
+        List<RequestInformation> content = result.get().collect(Collectors.toList());
         int pages = result.getTotalPages();
         long totalElements = result.getTotalElements();
         int totalPages = result.getPageable().getPageNumber();

@@ -1,6 +1,7 @@
 package com.example.challenge.services;
 
 import com.example.challenge.entities.Operation;
+import com.example.challenge.entities.RequestInformation;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -22,9 +23,9 @@ class ProducerServiceTest {
     @Test
     public void testCallToRabbitTemplate() {
 
-        Operation operation = new Operation(1, 2);
-        producerService.sendMessage(operation);
+        RequestInformation requestInformation = new RequestInformation("mock", "mock");
+        producerService.sendMessage(requestInformation);
 
-        verify(rabbitTemplate).convertAndSend("my-queue", operation);
+        verify(rabbitTemplate).convertAndSend("my-queue", requestInformation);
     }
 }

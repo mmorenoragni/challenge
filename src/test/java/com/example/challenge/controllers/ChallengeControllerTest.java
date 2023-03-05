@@ -3,6 +3,7 @@ package com.example.challenge.controllers;
 import com.example.challenge.commons.SearchResponseWrapper;
 import com.example.challenge.entities.Operation;
 import com.example.challenge.entities.OperationResult;
+import com.example.challenge.entities.RequestInformation;
 import com.example.challenge.services.OperationsService;
 import com.example.challenge.services.ProducerService;
 import com.example.challenge.services.RateLimiterService;
@@ -58,7 +59,7 @@ class ChallengeControllerTest {
                                         .queryParam("firstNum", "5")
                                         .queryParam("secondNum", "1"));
 
-        verify(producerService).sendMessage(any(Operation.class));
+        verify(producerService).sendMessage(any(RequestInformation.class));
         response.andExpect(status().isOk())
                 .andExpect(jsonPath("$.result").value(6.36));
 
@@ -100,10 +101,10 @@ class ChallengeControllerTest {
     @Test
     public void testHappuyPathController4() throws Exception {
 
-        Operation operation = new Operation(5,5);
-        List<Operation> operationsList = new ArrayList<>();
+        RequestInformation operation = new RequestInformation("/mock","{\"mock\" : \"mock_value\"}");
+        List<RequestInformation> operationsList = new ArrayList<>();
         operationsList.add(operation);
-        SearchResponseWrapper<Operation> searchResult = new SearchResponseWrapper<>(10,5, 10, operationsList);
+        SearchResponseWrapper<RequestInformation> searchResult = new SearchResponseWrapper<>(10,5, 10, operationsList);
 
         when(rateLimiterService.resolveBucket("challengeBucket")).thenReturn(mockBucket);
         when(mockBucket.tryConsume(1)).thenReturn(true);

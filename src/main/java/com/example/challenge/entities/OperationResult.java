@@ -11,4 +11,8 @@ public class OperationResult {
     public double getResult() {
         return result;
     }
+
+    public String toJson() {
+        return String.format("{\"result\" : %s}", result);
+    }
 }

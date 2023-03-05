@@ -3,7 +3,8 @@ package com.example.challenge.services;
 import com.example.challenge.commons.SearchResponseWrapper;
 import com.example.challenge.entities.Operation;
 import com.example.challenge.entities.OperationResult;
-import com.example.challenge.repositories.OperationRepository;
+import com.example.challenge.entities.RequestInformation;
+import com.example.challenge.repositories.RequestInformationRepository;
 import com.squareup.okhttp.mockwebserver.MockResponse;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
@@ -33,13 +34,13 @@ class OperationsServiceTest {
     private  MockServerService mockServerService;
 
     @Mock
-    private  OperationRepository operationRepository;
+    private RequestInformationRepository requestInformationRepository;
 
     @Mock
     private RAtomicDouble mockCacheResult;
 
     @Mock
-    private Page<Operation> mockPaggeableResult;
+    private Page<RequestInformation> mockPaggeableResult;
 
     @Mock
     private  RedissonClient redissonClient;
@@ -85,27 +86,26 @@ class OperationsServiceTest {
     @Test
     public void testFindAllOperationsWithPaggination() {
 
-        List<Operation> operationList = new ArrayList<>();
-        Operation operation1 = new Operation(10, 5);
-        Operation operation2 = new Operation(10, 10);
-        Operation operation3 = new Operation(5, 5);
-        operationList.add(operation1);
-        operationList.add(operation2);
-        operationList.add(operation3);
+        List<RequestInformation> requestInformationList = new ArrayList<>();
+        RequestInformation requestInformation1 = new RequestInformation("/mock", "{\"mock\" : \"mock\"}");
+        RequestInformation requestInformation2 = new RequestInformation("/search_mock", "{}");
+        RequestInformation requestInformation3 = new RequestInformation("/mock_url", "{}");
+        requestInformationList.add(requestInformation1);
+        requestInformationList.add(requestInformation2);
+        requestInformationList.add(requestInformation3);
 
-        when(mockPaggeableResult.get()).thenReturn(operationList.stream());
-        when(operationRepository.findAllWithPaggination(any(Pageable.class))).thenReturn(mockPaggeableResult);
+        when(mockPaggeableResult.get()).thenReturn(requestInformationList.stream());
+        when(requestInformationRepository.findAllWithPaggination(any(Pageable.class))).thenReturn(mockPaggeableResult);
         when(mockPaggeableResult.getTotalPages()).thenReturn(5);
         when(mockPaggeableResult.getTotalElements()).thenReturn(10L);
         when(mockPaggeableResult.getPageable()).thenReturn(mockPaggeable);
         when(mockPaggeable.getPageNumber()).thenReturn(3);
 
-        SearchResponseWrapper<Operation> searchResult = operationsService.findAllOperationsWithPaggination(5);
+        SearchResponseWrapper<RequestInformation> searchResult = operationsService.findAllOperationsWithPaggination(5);
 
         assertEquals(3, searchResult.getContent().size());
-        assertEquals(10, searchResult.getContent().get(0).getFirstNum());
-        assertEquals(5, searchResult.getContent().get(0).getSecondNum());
-        assertNull(searchResult.getContent().get(0).getId());
+        assertEquals("/mock", searchResult.getContent().get(0).getUrlInformation());
+        assertEquals("{\"mock\" : \"mock\"}", searchResult.getContent().get(0).getResponseInformation());
         assertEquals(3L, searchResult.getCurrentPage());
         assertEquals(10, searchResult.getTotalSize());
         assertEquals(5, searchResult.getTotalPages());
