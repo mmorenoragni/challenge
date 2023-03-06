@@ -48,7 +48,7 @@ class ChallengeControllerTest {
     Bucket mockBucket;
 
     @Test
-    public void testHappuyPathController() throws Exception {
+    public void testPerformAnOperationAndGetAResult() throws Exception {
 
         when(rateLimiterService.resolveBucket("challengeBucket")).thenReturn(mockBucket);
         when(mockBucket.tryConsume(1)).thenReturn(true);
@@ -65,7 +65,7 @@ class ChallengeControllerTest {
     }
 
     @Test
-    public void testHappuyPathController2() throws Exception {
+    public void testPerformAnOperationAndGetAnExceptionBecauseRateWasExceed() throws Exception {
 
         when(rateLimiterService.resolveBucket("challengeBucket")).thenReturn(mockBucket);
         when(mockBucket.tryConsume(1)).thenReturn(false);
@@ -82,23 +82,46 @@ class ChallengeControllerTest {
     }
 
     @Test
-    public void testHappuyPathController3() throws Exception {
+    public void testPerformAnOperationAndGetAnExceptionWhenParametersAreInvalids() throws Exception {
 
-        when(rateLimiterService.resolveBucket("challengeBucket")).thenReturn(mockBucket);
-        when(mockBucket.tryConsume(1)).thenReturn(false);
+        ResultActions response = mockMvc.perform(get("/challenge/addition")
+                .queryParam("firstNum", "0")
+                .queryParam("secondNum", "1"));
 
-        ResultActions response = mockMvc.perform(get("/challenge/find_operations")
-                .queryParam("pageNumber", "5"));
+        response.andExpect(status().is(400))
+                .andExpect(jsonPath("$.error").value("bad_request"))
+                .andExpect(jsonPath("$.message").value("parameters should be greater than zero"))
+                .andExpect(jsonPath("$.status").value(400));
 
-        response.andExpect(status().is(429))
-                .andExpect(jsonPath("$.error").value("rate_limit"))
-                .andExpect(jsonPath("$.message").value("Api Rate Limit has been exceeded"))
-                .andExpect(jsonPath("$.status").value(429));
+        ResultActions response2 = mockMvc.perform(get("/challenge/addition")
+                .queryParam("firstNum", "1")
+                .queryParam("secondNum", "0"));
+
+        response2.andExpect(status().is(400))
+                .andExpect(jsonPath("$.error").value("bad_request"))
+                .andExpect(jsonPath("$.message").value("parameters should be greater than zero"))
+                .andExpect(jsonPath("$.status").value(400));
 
     }
 
     @Test
-    public void testHappuyPathController4() throws Exception {
+    public void testPerformASearchAndGetAResultBecausePageNumberIsInvalid() throws Exception {
+
+        when(rateLimiterService.resolveBucket("challengeBucket")).thenReturn(mockBucket);
+        when(mockBucket.tryConsume(1)).thenReturn(true);
+
+        ResultActions response = mockMvc.perform(get("/challenge/find_operations")
+                .queryParam("pageNumber", "-5"));
+
+        response.andExpect(status().is(400))
+                .andExpect(jsonPath("$.error").value("bad_request"))
+                .andExpect(jsonPath("$.message").value("pageNumber paramater should be equal or greater than zero"))
+                .andExpect(jsonPath("$.status").value(400));
+
+    }
+
+    @Test
+    public void testPerformASearchAndGetResult() throws Exception {
 
         RequestInformation operation = new RequestInformation("/mock","{\"mock\" : \"mock_value\"}");
         List<RequestInformation> operationsList = new ArrayList<>();

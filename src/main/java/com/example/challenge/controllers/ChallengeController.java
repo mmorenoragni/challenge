@@ -36,11 +36,14 @@ public class ChallengeController {
 
     @Operation(summary ="Este endpoint recibe dos numeros como parametro y devuelve como resultado la suma de ambos " +
             "numeros a la que se le aplica un porcentaje que resulta como valr de la suma de los dos numeros dividios por cien")
-    @GetMapping(value = "/challenge/addition", produces="application/json")
+    @GetMapping(value = "/challenge/addition")
     public OperationResult additionController(@RequestParam float firstNum,
                                              @RequestParam float secondNum,
                                               HttpServletRequest request) {
 
+        if (firstNum < 1 || secondNum < 1) {
+            throw new BadRequestException("parameters should be greater than zero");
+        }
         if (!rateLimiterService.resolveBucket("challengeBucket").tryConsume(1)) {
             throw new RateLimitException("Api Rate Limit has been exceeded");
         }
