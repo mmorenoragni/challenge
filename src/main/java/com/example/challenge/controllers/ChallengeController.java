@@ -8,7 +8,6 @@ import com.example.challenge.services.OperationsService;
 import com.example.challenge.services.ProducerService;
 import com.example.challenge.services.RateLimiterService;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

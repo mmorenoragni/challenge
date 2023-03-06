@@ -1,5 +1,5 @@
 .gradle
-build/
+.build/
 !gradle/wrapper/gradle-wrapper.jar
 .vscode/
 bin/
@@ -20,7 +20,7 @@ bin/
 
 ### NetBeans ###
 nbproject/private/
-build/
+.build/
 nbbuild/
 dist/
 nbdist/

@@ -1,6 +1,5 @@
 package com.example.challenge.services;
 
-import com.example.challenge.entities.Operation;
 import com.example.challenge.entities.RequestInformation;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

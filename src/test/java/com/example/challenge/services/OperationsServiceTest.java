@@ -1,7 +1,6 @@
 package com.example.challenge.services;
 
 import com.example.challenge.commons.SearchResponseWrapper;
-import com.example.challenge.entities.Operation;
 import com.example.challenge.entities.OperationResult;
 import com.example.challenge.entities.RequestInformation;
 import com.example.challenge.repositories.RequestInformationRepository;

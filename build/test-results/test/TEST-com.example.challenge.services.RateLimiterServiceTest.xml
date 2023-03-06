@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.challenge.services.RateLimiterServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-05T15:12:36" hostname="AR0C02GF1F8Q05N" time="0.017">
-  <properties/>
-  <testcase name="testWhenBucketReturnFalseBecauseDoesNotHaveTokens()" classname="com.example.challenge.services.RateLimiterServiceTest" time="0.015"/>
-  <testcase name="testWhenBucketReturnTrueBecauseStillHasTokens()" classname="com.example.challenge.services.RateLimiterServiceTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
